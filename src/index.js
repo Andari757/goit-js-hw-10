@@ -15,8 +15,8 @@ function fetchCountries(value) {
         .then(r => {
             console.log(r)
             r.forEach(e => {
-               console.log(Object.values(e.languages))
-                ul.insertAdjacentHTML("afterbegin", `<li>${e.name.official}${e.capital}${e.population}${e.languages}</li>`)
+               console.log("v")
+                ul.insertAdjacentHTML("afterbegin", `<li>${e.name.official}${e.capital}${e.population}${Object.values(e.languages)}<img src=${e.flags.svg}></li>`)
             });
             
             
